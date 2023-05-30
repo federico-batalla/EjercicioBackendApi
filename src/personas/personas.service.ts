@@ -23,7 +23,7 @@ export class PersonasService {
         return this._personas
     }
 
-    getPersonaId(id){
+    getPersonaId(id:number){
         let personaEcontrada = this._personas.find(n => n.id == id);
         if(!personaEcontrada){
             return false
@@ -32,5 +32,15 @@ export class PersonasService {
         return this._personas[personaEncontradaIndex]
     }
 
+    eliminarPersonaId(id:number){
+        let personaEcontrada = this._personas.find(n => n.id == id);
+        if(!personaEcontrada){
+            return false
+        }
+        let personaEncontradaIndex = this._personas.findIndex(n => n.id == id);
+        this._personas.splice(personaEncontradaIndex,1);
+        return true
+    
+    }
 
 }

@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Delete, Get, Param } from '@nestjs/common';
 import { PersonasService } from './personas.service';
 
 @Controller('base/api/personas')
@@ -15,4 +15,8 @@ constructor( private personasService:PersonasService){}
         return this.personasService.getPersonaId(id);
     }
 
+    @Delete("/:id")
+    eliminarPersonaId(@Param("id") id:number){
+        return this.personasService.eliminarPersonaId(id);
+    }
 }
