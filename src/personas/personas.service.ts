@@ -6,21 +6,11 @@ export class PersonasService {
     private _personas:Persona [];
 
     constructor(){
-        this._personas = [
-            {
-                id:34334935,
-                nombre:"federico",
-                apellido:"batalla",
-                domicilio:"antiguis leñadores 51 b",
-                edad:34
-
-
-            }
-        ];
+        this._personas = [];
     }
 
     getPersonas (){
-        return this._personas
+        return this._personas;
     }
 
     getPersonaId(id:number){
