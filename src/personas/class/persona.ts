@@ -1,5 +1,6 @@
 export class Persona{
-    dni:number;
+    
+    id:number;
     nombre:string;
     apellido:string;
     domicilio:string;

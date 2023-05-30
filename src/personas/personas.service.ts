@@ -8,7 +8,7 @@ export class PersonasService {
     constructor(){
         this._personas = [
             {
-                dni:34334935,
+                id:34334935,
                 nombre:"federico",
                 apellido:"batalla",
                 domicilio:"antiguis leñadores 51 b",
@@ -21,6 +21,15 @@ export class PersonasService {
 
     getPersonas (){
         return this._personas
+    }
+
+    getPersonaId(id){
+        let personaEcontrada = this._personas.find(n => n.id == id);
+        if(!personaEcontrada){
+            return false
+        }
+        let personaEncontradaIndex = this._personas.findIndex(n => n.id == id);
+        return this._personas[personaEncontradaIndex]
     }
 
 
