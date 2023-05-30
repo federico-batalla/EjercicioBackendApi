@@ -43,4 +43,9 @@ export class PersonasService {
     
     }
 
+    agregarPersona(persona){
+        this._personas.push(persona);
+        return true
+    }
+
 }
