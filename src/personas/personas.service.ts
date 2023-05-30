@@ -34,8 +34,13 @@ export class PersonasService {
     }
 
     agregarPersona(persona){
-        this._personas.push(persona);
-        return true
+        let existeId = this._personas.find(n => n.id == persona.id)
+        if (!existeId) {
+            this._personas.push(persona);
+            return true
+        }
+        return false
+        
     }
 
 }
